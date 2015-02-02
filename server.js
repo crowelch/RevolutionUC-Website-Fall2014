@@ -7,7 +7,7 @@ AWS = require('aws-sdk'),
 morgan = require('morgan'),
 serveStatic = require('serve-static');
 
-AWS.config.loadFromPath('./config/aws.json');
+//AWS.config.loadFromPath('./config/aws.json');
 
 var db = require('./config/db');
 
