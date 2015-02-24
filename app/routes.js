@@ -21,7 +21,7 @@ module.exports = function (app, mongoose) {
       hacker.save(function (err) {
         if (err) throw err;
       });
-      res.redirect('http://revolutionuc.com/attending.html');
+      res.redirect('http://revolutionuc.com/attending');
     });
   });
 
@@ -33,7 +33,7 @@ module.exports = function (app, mongoose) {
       hacker.save(function (err) {
         if (err) throw err;
       });
-      res.redirect('http://revolutionuc.com/not.html')
+      res.redirect('http://revolutionuc.com/not_attending')
     });
   });
 

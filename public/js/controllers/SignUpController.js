@@ -37,18 +37,18 @@ app.controller('SignUpCtrl', function ($scope, $modal, $log) {
     $scope.init = function () {
       debugger;
       if ($location.hash === "#attending") {
-        toastr.success('See you November 14th!', "Yay!");
+        toastr.success('See you April 10th!', "Yay!");
       }
     };
   })
   .controller('AttendanceCtrl', function ($scope, $location) {
     $scope.attending = function () {
-      toastr.success("Yay!", 'See you November 14th!');
+      toastr.success("Yay!", 'See you April 10th!');
     };
     $scope.init = function () {
       debugger;
       if ($location.hash === "#attending") {
-        toastr.success('See you November 14th!', "Yay!");
+        toastr.success('See you April 10th!', "Yay!");
       }
     }
   });
