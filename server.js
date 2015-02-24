@@ -21,8 +21,9 @@ app.use(bodyParser.json());
 
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use('/', express.static(__dirname + '/public'));
+app.use('/not_attending', express.static(__dirname + '/public/not.html'));
+app.use('/attending', express.static(__dirname + '/public/attending.html'));//pretty routes
 require('./app/routes')(app, mongoose);
-
 
 app.listen(port);
 console.log('Magic happens on port ' + port);
