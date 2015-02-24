@@ -1,5 +1,5 @@
 module.exports = function (app, mongoose) {
-  var Hacker = mongoose.model('Hacker', require('./models/hacker.js'));
+  var Hacker = mongoose.model('Spring15', require('./models/hacker.js'));
   var fs = require('fs');
   var util = require('util');
 
