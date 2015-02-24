@@ -37,17 +37,21 @@ var HackerSchema = mongoose.Schema({
     type: String,
     required: false
   },
+  diet: {
+    type: String,
+    required: false
+  },
   coming: {
-    required: false,
-    type: Boolean
+    type: Boolean,
+    required: false
   },
   attended: {
-    required: false,
-    type: Boolean
+    type: Boolean,
+    required: false
   },
   isFirstHackathon: {
-    required: true,
-    type: Boolean
+    type: Boolean,
+    required: false
   },
   resume: String
 });
