@@ -3,7 +3,6 @@ app = express(),
 mongoose = require('mongoose'),
 bodyParser = require('body-parser'),
 methodOverride = require('method-override'),
-AWS = require('aws-sdk'),
 morgan = require('morgan'),
 serveStatic = require('serve-static');
 
