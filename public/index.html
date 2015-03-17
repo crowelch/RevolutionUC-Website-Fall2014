@@ -1,536 +1,315 @@
-<!DOCTYPE html>
+<!-- StartupSass v0.0.1 -->
+<!doctype html>
 <html lang="en">
+
 <head>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Revolution UC is a hackathon at the University of Cincinnati">
-  <meta name="author" content="ACM@UC">
+  <meta charset="utf-8">
 
-  <title>RevolutionUC</title>
+  <!-- Content metadata -->
+  <title>Revolution UC</title>
+  <meta name="description" content="Small, responsive scaffolding designed to accelerate your web project">
+  <meta name="author" content="Michael Zalla (https://github.com/MichaelZalla)">
 
-  <!-- Bootstrap core CSS -->
+  <!-- Behavioral metadata -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UI-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
 
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700italic,700'
-        rel='stylesheet' type='text/css'>
-  <!--     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]>
-  <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!-- Favicons -->
+  <!-- [if IE]><link rel="shortcut icon" href="favicon.ico?v=0.0.1" /><![endif] -->
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-  <![endif]-->
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/startup-sass.min.css?v=0.0.1">
 
-  <!-- Custom styles for this template -->
-  <link href="css/carousel.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"></link>-->
-  <link rel="stylesheet" href="css/bootstrap.min.css"></link>
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css"></link>
-  <link rel="stylesheet" href="css/toastr.min.css">
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.min.js"></script>-->
-
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/angular-route.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="js/controllers/SignUpController.js"></script>
-  <script type="text/javascript" src="https://api.filepicker.io/v1/filepicker.js"></script>
-  <script>
-    filepicker.setKey("Amyv7LoMDTNqWefRjRr0Gz");
-  </script>
-  <script type="text/javascript" src="js/toastr.min.js"></script>
 </head>
 
-<body ng-app="RevUc">
+<body id="landing">
 
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel" ng-controller="SignUpCtrl" ng-init="init()">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="img/UCcampus.png" alt="First slide" class="blur">
+  <!-- Site header -->
+  <header id="header" class="fixed dark">
+    <div class="container">
+      <div class="content">
 
-      <div class="container">
-        <div class="carousel-caption">
-          <img src="img/revuc_serif.png" class="logo" alt="Revolution UC">
+        <!-- Branding -->
+        <div class="left">
+          <a id="logo" data-scroll-nav="0"></a>
+        </div>
 
-          <h2>University of Cincinnati &#8212; April 10th-12th</h2>
-
-          <!--h3>Friday 7:00 PM - 525 Old Chemistry</h3-->
-
-          <h3>We've got the food, prizes, and hacking space</h3>
-
-          <p><a class="btn btn-lg btn-danger" ng-click="open()" role="button">Register today</a></p>
+        <!-- Responsive navigation menu -->
+        <div class="right">
+          <section class="ss-header-navigation fullscreen">
+            <div class="container">
+              <div class="content dark">
+                <ul>
+                  <li>
+                    <a data-scroll-nav="1">
+                      <span class="label">About</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-scroll-nav="2">
+                      <span class="label">Schedule</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-scroll-nav="3">
+                      <span class="label">FAQ</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-scroll-nav="4">
+                      <span class="label">Sponsors</span>
+                    </a>
+                  </li>
+                  <!-- <li><a data-scroll-nav="5"><span class="label">Contact Us</span></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </section>
+          <div class="ss-header-navigation-toggle"></div>
         </div>
       </div>
     </div>
-    <div class="item">
-      <img src="img/Hack.jpg" alt="Second slide" class="blur">
+  </header>
 
-      <div class="container">
-        <div class="carousel-caption">
-          <img src="img/revuc_serif.png" class="logo" alt="Revolution UC">
+  <!-- Content section -->
+  <section class="fullscreen dark" id="section1" data-scroll-index="0" style="background-image:url(../images/background/revuc-background.png); background-position:center; background-repeat:no-repeat;">
+    <div class="container">
+      <div class="content">
+        <img src="/images/logos/RevUCLogo_Long.svg">
+      </div>
+      <div class="content">
+        <a class="button" href="/learn-more.html">Learn More</a>
+      </div>
+    </div>
+    </div>
+  </section>
 
-          <h2>University of Cincinnati &#8212; November 14th-16th</h2>
+  <section id="about" data-scroll-index="1" class="fullscreen">
+    <div class="container">
+      <div class="content">
 
-          <h3>Friday 7:00 PM - 525 Old Chemistry</h3>
+        <div class="row">
+          <div class="column small-12 medium-6">
+            <h2 style="margin:0;"></h2>
+            <span class="quote">"Foo bar biz baz"</span>
+            <span class="attribution">Ben Franklin</span>
+            <p>Learning is essential to a hackathon. Whether you’re a veteran hacker or a first-timer, we’re excited for you to learn something new! We’ll have exciting tech talks throughout the event and we encourage all our attendees to learn something
+              new!
+              <p>
+          </div>
+          <div class="column small-12 medium-6">
+            <img src="http://placekitten.com/350/350">
+            <span class="caption"></span>
+          </div>
+        </div>
 
-          <h3>You've got 36 hours to make something awesome</h3>
 
-          <p><a class="btn btn-lg btn-danger" ng-click="open()" role="button">Register today</a></p>
+				<h2 style="margin:0;">What is RevolutionUC?></h2>
+				<p>RevolutionUC is a student hackathon in which we invite students from across the midwest to partake in a weekend of code, community, and self-improvement.</p>
+				<h2 style="margin:0;">Let’s build together</h2>
+				<p>
+					“Don't simply dream, create. Don't simply create, ship. Don't simply ship, dream.”<br>
+					― Ryan Lilly<br><br>
+ 							Projects are one of the key elements in any hackathon. At RevolutionUC, you have 36 hours to create something awesome from start to finish with your team. We’ve seen awesome mobile apps, web applications, and hardware hacks in the past and we’re excited to see what will be made this spring.
+				</p>
+
+        <h2 style="margin:0;">Let’s learn together</h2>
+        <!--
+				FOllow a convention like this:
+				span.quote{Tell me and I forget, teach me and I may remember, involve me and I learn.}
+				span.attribution{Benjamin Frankling}
+				-->
+        <p>
+
+          Learning is essential to a hackathon. Whether you’re a veteran hacker or a first-timer, we’re excited for you to learn something new! We’ll have exciting tech talks throughout the event and we encourage all our attendees to learn something new!
+          <br> New to the hackathon scene? Awesome! We’re excited to have you. We’re more than willing to help you get you started with your first hack! With our team of mentors, assembled from our organizer team and software engineers from our sponsors,
+          we’ll help get you started and get you past the bugs and bumps.
+        </p>
+
+        <h2 style="margin:0;">Let’s grow together</h2>
+        <p>
+          “Strength lies in differences, not in similarities”
+          <br> ― Stephen R. Covey
+          <br>
+          <br> Hackathons are more than just a competition or showcase of technical skill. At RevolutionUC, we strive to create an all-inclusive community that acts as an outlet in which we can join our peers and share our passion for all the incredible things
+          that can be done through programming. We’re excited to share this ethos with all of our attendees and come together to grow the hacker community here in Cincinnati.
+        </p>
+
+        <h2 style="margin:0;">Let’s start a revolution</h2>
+
+        <p>Join us on April 10th through the 12th to build, learn, and grow together!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" data-scroll-index="2" class="fullscreen dark">
+    <div class="container">
+      <div class="content">
+
+        <h2 class="center" style="margin:0;">We're still nailing down this year's schedule,
+          <br>but here's what last year looked like!</h2>
+
+      </div>
+      <div class="content">
+        <div class="column small-12 medium-4 ">
+          <h2>Friday</h2>
+          <p>8pm - Opening Ceremony</p>
+          <p>10pm - Idea forming workshop and team building.</p>
+          <p>11pm - Hacking begins.</p>
+        </div>
+        <div class="column small-12 medium-4">
+          <h2>Saturday</h2>
+          <p>All day - Hacking and tech-talks </p>
+        </div>
+        <div class="column small-12 medium-4">
+          <h2>Sunday</h2>
+          <p>11am - Your 36 Hours are up! Hacking ends.</p>
+          <p>12pm - Show us what you hacked at the project expo.</p>
+          <p>2pm - Closing ceremony</p>
         </div>
       </div>
     </div>
-    <div class="item">
-      <img src="img/City.jpg" alt="Third slide" class="blur">
+  </section>
+  <section id="faq" data-scroll-index="3" class="fullscreen">
+    <div class="container">
+      <div class="content">
+        <h1 class="center" style="margin:0;">FAQ</h1>
+        <h3>Do I need an idea or team to sign up?</h3>
+        </a>
+        <p>Nope! We'll be hosting an idea generation workshop to help people think of ideas to work on at the hackathon. So you should sign up regardless.</p>
+        </a>
+        <h3>What if I don't have any experience?</h3>
+        </a>
+        <p>We will have a top shelf team of veteran mentors to help you hit the ground running with ideas and guidance, plenty of opportunities to engage other talented and curious individuals like yourself and of course lots and lots of fun events right
+          when you hit that rough patch. RevolutionUC, is a learning and sociable experience for people of all experience levels.</p>
+        </a>
+        <h3>What are some examples of projects?</h3>
+        </a>
+        <p>Check out some of the aswesome submissions we had last <a href="http://revuc.challengepost.com/submissions" style="color: #0CD2FF">fall</a>!</p>
+        </a>
+        <h3>Where do we sleep?</h3>
+        </a>
+        <p>We will have a space near our hacking area set aside for attendees that want to sleep. We'll be buying large amounts of Red Bull and other caffeinated drinks so hopefully you won't have to.</p>
+        </a>
+        <h3>Where do we park?</h3>
+        </a>
+        <p>Parking will be in the <a href="http://usquareattheloop.com/parking" style="color: #0CD2FF">USquare East Garage</a>
+        </p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <div class="container">
-        <div class="carousel-caption">
-          <img src="img/revuc_serif.png" class="logo" alt="Revolution UC">
+  <section id="sponsors" data-scroll-index="4" class="fullscreen dark">
+    <div class="container">
+      <div class="content">
+        <h1 class="center" style="margin:0;">Sponsors</h1>
+      </div>
+      <!-- <div class="content">
+				<h3 class="center" style="margin:0;">Title Sponsor Here</h3>
+			</div>
+			<div class="center column small-12 medium-4">
+				<p> Other Sponsor Logos Here </p>
+			</div>
+			<div class="center column small-12 medium-4">
+				<p> Other Sponsor Logos Here </p>
+			</div>
+			<div class="center column small-12 medium-4">
+				<p> Other Sponsor Logos Here </p>
+			</div> -->
+      <div class="content">
+        <p class="center">Interested in sponsoring? Need to know more? Get in touch with us at <a href="mailto:info@revolutionuc.com" style="color: #0CD2FF">info@revolutionuc.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-          <h2>University of Cincinnati &#8212; November 14th-16th</h2>
+  <!-- <section id="contact-us" data-scroll-index="5">
+		<div class="container">
+			<div class="content">
+				<h1 class="center" style="margin:0;">Contact Us!</h1>
+			</div>
+		</div>
+	</section> -->
 
-          <h3>Friday 7:00 PM - 525 Old Chemistry</h3>
-
-          <h3>Mark your calendars and join in the fun</h3>
-
-          <p><a class="btn btn-lg btn-danger" ng-click="open()" role="button">Register today</a></p>
+  <!-- Site footer -->
+  <footer id="footer" class="dark" data-scroll-index="5" style="background: #313131">
+    <div class="container">
+      <div class="content ss-footer-navigation">
+        <div class="row">
+          <div class="left column small-12 medium-6 row ss-footer-social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/RevolutionUC" class="facebook" alt="Facebook">
+                  <p>Facebook</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/revolution_uc" class="twitter" alt="Twitter">
+                  <p>Twitter</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/groups/BearHacks" class="group" alt="Bearcat Hackers">
+                  <p>Bearcat Hackers</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right column small-12 medium-6">
+            <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+              <span class="label">RevolutionUC adheres to the MLH code of conduct</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>-->
-</div>
-<!-- /.carousel -->
+  </footer>
 
-<!--<div class = "row">
-  <div class="col-lg-12">
-    <h1 class="center">Hosted By</h1>
-    <a>insert img here for title sponsor</a>
-  </div>
-</div>
-<hr>-->
+  <!-- LiveReload with grunt-contrib-watch (remove in production) -->
+  <script src="//localhost:35729/livereload.js"></script>
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-<br>
-<div class="container" style="text-align: center;">
-  <h1>CLOSING CEREMONY IS IN 544/644 BALDWIN</h1>
-</div>
-<br>
-<br>
-<div class="container marketing">
+  <!-- Dependencies -->
+  <script src="/js/vendor/jquery/jquery.min.js"></script>
+  <script src="/js/vendor/jquery/plugins/jquery-waypoints.min.js"></script>
+  <script src="/js/vendor/jquery/plugins/jquery-scrollIt.min.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script>
+    $(function() {
+    	$('.ss-nav-menu-toggle').parent().on('mouseup', function(e) {
+    		$('.ss-nav-menu').toggleClass('expanded');
+    	});
+    });
 
-<!-- Three columns of text below the carousel -->
-<div class="row">
+    $(function() {
+    	$('.ss-header-navigation-toggle').parent().on('click', function(e) {
+    		$('.ss-header-navigation').toggleClass('expanded');
+    	});
 
-  <div class="col-lg-4">
-    <img class="img-circle" src="img/tablet.png" width="140" alt="Competition">
+    	$.scrollIt({
+    		easing: 'easeInOutCubic',
+    		scrollTime: 1000,
+    		upKey: 38, // key code to navigate to the next section
+    		downKey: 40,
+    		activeClass: 'active',
+    		topOffset: -1 * $('header').outerHeight()
+    	});
 
-    <h2>Competition</h2>
+    	var headerWaypoint = new Waypoint({
+    		element: document.getElementsByTagName('header'),
+    		offset: -250,
+    		handler: function() {
+    			$('header').toggleClass('minimal');
+    		}
+    	});
 
-    <p>Build a web, desktop, mobile, or hardware project.</p>
-  </div>
-  <!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img class="img-circle" src="img/lightbulb.png" width="140" alt="Lightbulb">
-
-    <h2>300+ Hackers</h2>
-
-    <p>A hackathon open to all University and High School Students.</p>
-  </div>
-  <!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img class="img-circle" src="img/clock.png" width="140" alt="36 Hours">
-
-    <h2>36 Hours</h2>
-
-    <p>You've got 36 hours to make something awesome.</p>
-  </div>
-  <!-- /.col-lg-4 -->
-</div>
-<!-- /.row -->
-
-
-<!-- START THE FEATURETTES -->
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">WHAT IS REVOLUTIONUC?</h2>
-
-    <p class="lead">RevolutionUC is a college hackathon, hosted every semester at the University of Cincinnati.
-      A hackathon is when people who are excited about programming come together for a weekend and collaborate
-      to build cool things. Entrepreneurs, designers, and developers work in teams to create hacks and apps
-      for web or mobile platforms - in our case, these creators are university students. Projects will be
-      judged based on creativity, technical difficulty, polish, and usefulness.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-responsive" src="img/revuc_winners.jpg"
-         alt="CEAS Learning Center">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-5">
-    <img class="featurette-image img-responsive" src="img/Steger.jpg" alt="Steger Student Life Center">
-  </div>
-  <div class="col-md-7">
-    <h2 class="featurette-heading">WHO CAN PARTICIPATE?</h2>
-
-    <p class="lead">RevolutionUC is open to all high school, undergraduate and graduate students, including
-      freshmen! You don't have to attend the University of Cincinnati, be a computer science
-      major, or even have previous hackathon experience! We will have tech talks beforehand so you can
-      ramp up quickly. You can come with a team or come alone. We will have sessions to help people find team
-      members and/or form teams, as well as idea workshops to help people think of ideas to work on for the
-      hackathon. Best of all, no previous programming experience is required! </p>
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">WHAT SHOULD I BRING?</h2>
-
-    <p class="lead">Laptop and charger, cellphone and charger, change of clothes, toothbrush. The only thing you
-      need to worry about is your hack. Breakfast, lunch, dinner, snacks, and plenty of drinks (including energy
-      drinks)
-      will be provided! If you want to sleep, make sure to bring your own pillow and
-      blanket.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-responsive" src="img/CEASLearning.jpg" alt="Generic placeholder image">
-  </div>
-</div>
-
-<!-- <hr class="featurette-divider">-->
-
-<!-- /END THE FEATURETTES -->
-<div class="container marketing">
-
-<!-- Three columns of text below the carousel -->
-<br>
-
-<div class="row">
-  <div class="col-sm-12">
-    <h2 class="center featurette-heading">SPONSORS</h2>
-  </div>
-  <br>
-</div>
-<div class="row">
-  <div class="col-sm-12" style="text-align: center;">
-    <h2>Hosted by:</h2>
-    <a href="http://www.uc.edu/ucit.html"><img class="centerimg sponsors" style="height: auto; width: 50%;"
-                                               src="img/UCIT.jpg" alt="IT@UC"></a>
-  </div>
-</div>
-<hr>
-<div class="row">
-  <div class="col-sm-6">
-    <a href="http://cbts.cinbell.com"><img class="centerimg sponsors" style="width: 100%" src="img/CBTS.png"
-                                           alt="CBTS;"></a>
-  </div>
-  <div class="col-sm-6">
-    <a href="http://ceas.uc.edu/"><img class="centerimg sponsors" src="img/UnitPair_forEngAppSci.png"
-                                       style="width: 75%"
-                                       alt="College of Engineering & Applied Science, University of Cincinnati"></a>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-3" style="">
-    <a href="http://modulus.io"><img class="centerimg sponsors" src="img/modulus-logo-progress-color.jpg"
-                                     style="width: 100%; margin-top: 20%" alt="Modulus"></a>
-  </div>
-  <div class="col-sm-3">
-    <a href="http://zipscene.com"><img class="centerimg sponsors zipscene" src="img/zipscene.png"
-                                       alt="Zipscene"></a>
-  </div>
-  <div class="col-sm-3">
-    <a href="http://intuit.com"><img class="centerimg sponsors" src="img/intuit_blue.png"
-                                     style="width: 100%; margin-top: 20%" alt="intuit"> </a>
-  </div>
-  <div class="col-sm-3">
-    <a href="http://scripps.com"><img class="centerimg sponsors" src="img/scripps.jpg"
-                                      style="width:100%; margin-top: 30%"
-                                      alt="Scripps"></a>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-    <a href="http://straphq.com"><img class="centerimg sponsors" src="img/strap.png"
-                                      style="width: 90%; margin-top: 45%" alt="Strap"> </a>
-  </div>
-
-  <div class="col-sm-4">
-    <a href="http://mlh.io"><img class="centerimg sponsors" src="img/mlh.png"
-                                 style="width: 90%" alt="MLH"> </a>
-  </div>
-  <div class="col-sm-4">
-    <a href="http://www.ooshirts.com/"><img class="centerimg sponsors" src="img/ooshirts.png"
-                                            style="width: 90%; margin-top: 38%" alt="OOShirts"></a>
-  </div>
-</div>
-
-<!--<hr>-->
-<!--<div class="col-lg-12">-->
-<!--<h2 class="center">Want your company logo here? Get in-->
-<!--<a href="mailto:info@revolutionuc.com">touch.</a>-->
-<!--</h2>-->
-<!--</div>-->
-<!--&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; /.row &ndash;&gt;-->
-
-<hr>
-<div class="row">
-  <div class="col-sm-12">
-    <a name="schedule"></a>
-
-    <h1 class="center">SCHEDULE</h1>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <h3>Friday (11/14)</h3>
-    </div>
-    <div class="col-sm-9">
-      <h3>6pm - Bring on the Sponsors!</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>7pm - YOU (hackers) arrive!</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>8pm - Opening Ceremony. And intro from our title sponsor: IT@UC.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>9:30pm - Get your space set up! And some tasty pizza from our friends at <a
-        href="http://www.adriaticosuc.com">Adriatico's</a>.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>10pm - Idea forming workshop and team building. (Optional)</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>11pm - HACKS ON HACKS! Hacking begins.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <h3>Saturday (11/15)</h3>
-    </div>
-    <div class="col-sm-9">
-      <h3>2am - Midnight snack! Cake pops provided by
-        <a href="http://mlh.io"> Major League Hacking</a>.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>8am - Breakfast! From the delicious <a href="https://www.panerabread.com/en-us/home.html">Panera Bread</a>.
-      </h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>1pm - Lunch by the tasty <a href="https://currito.com/">Currito Burrito</a>.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>7pm - Dinner! <a href="http://www.alabama-q.com/">Alabama-Q</a>.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <h3>Sunday (11/16)</h3>
-    </div>
-    <div class="col-sm-9">
-      <h3>1am - Delicious air popped POPCORN!</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>8am - Breakfast of tasty Panera!</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>11am - Your 36 Hours are up! Hacking ends.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>11:01am - Lunch. Freaky fast... <a href="http://www.jimmyjohns.com">Jimmy John's</a>! </h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>12pm - Show us what you hacked! Demos.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3" style="opacity: 0; background-color: black;"></div>
-    <div class="col-sm-9">
-      <h3>2pm - Did you win? Closing ceremony (544/644 Baldwin).</h3>
-    </div>
-  </div>
-</div>
-
-<hr>
-<div class="row">
-  <div class="col-lg-12">
-    <h1 class="center">FAQ</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-4">
-    <h3>Do I need an idea/team to sign up?</h3>
-
-    <p>Nope! We'll be hosting an idea generation workshop to help people think of ideas to work on at the hackathon.
-      So you
-      should sign up regardless.</p>
-  </div>
-  <div class="col-lg-4">
-    <h3>What if I don't have any experience?</h3>
-
-    <p>We will have a top shelf team of veteran mentors to help you hit the ground running with ideas and
-      guidance, plenty of opportunities to engage other talented and curious individuals like yourself and of
-      course lots and lots of fun events right when you hit that rough patch. RevolutionUC, is a learning and
-      sociable experience for people of all experience levels.</p>
-  </div>
-  <div class="col-lg-4">
-    <h3>Where do we sleep?</h3>
-
-    <p>We will have a space near our hacking area set aside for attendees that want to sleep. We'll be buying
-      large amounts of Red Bull and other caffeinated drinks so hopefully you won't have to.</p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-4" style="text-align: center;">
-    <h3>Where do we park?</h3>
-
-    <p>Parking will be in the <a href="http://usquareattheloop.com/parking">USquare East Garage</a>.</p>
-  </div>
-  <div class="col-lg-4">
-    <span style="bg-color:black; opacity: 0;"></span>
-  </div>
-  <div class="col-lg-4" style="text-align: center">
-    <h3>What are some examples of projects?</h3>
-
-    <p>Check out the submission gallery for last year's <a
-      href="http://revolutionuc.challengepost.com/?ref_content=revolutionuc.challengepost.com&ref_feature=challenge&ref_medium=discover">RevolutionUC </a>
-      and <a href="http://pennappsx.challengepost.com/submissions">PennappsX!</a></p>
-  </div>
-
-
-</div>
-<!-- FOOTER -->
-</div>
-<br>
-<br>
-<footer class="container">
-
-  <p class="pull-left">Follow <a href="https://twitter.com/Revolution_UC">@Revolution_UC</a> for updates. Check out <a
-    href="http://www.ceas3.uc.edu/acm/">ACM@UC</a>.</p>
-
-  <p class="pull-right">RevolutionUC adheres to the <a href="http://mlh.io/about/code-of-conduct.html">MLH code of
-    conduct.</a></p>
-</footer>
-
-</div>
-<!-- /.container -->
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/docs.min.js"></script>
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-47568128-1', 'revolutionuc.com');
-  ga('send', 'pageview');
-
-</script>
-
-<script type="text/javascript">
-  (function () {
-    function brieflyAddCss(cssCode) {
-      var styleElement = document.createElement("style");
-      styleElement.type = "text/css";
-      if (styleElement.styleSheet) {
-        styleElement.styleSheet.cssText = cssCode;
-      } else {
-        styleElement.appendChild(document.createTextNode(cssCode));
-      }
-      document.head.appendChild(styleElement);
-
-      setTimeout(function () {
-        document.head.removeChild(styleElement);
-      }, 100);
-    }
-
-    function fixFonts() {
-      try {
-        brieflyAddCss("* { color: white; }");
-      } catch (e) {
-      }
-    }
-
-    if (window.addEventListener) {
-      window.addEventListener("load", fixFonts);
-    } else {
-      window.attachEvent("onload", fixFonts);
-    }
-  })();
-</script>
+    });
+  </script>
+  <script type="text/javascript" src="js/angular-route.js"></script>
 </body>
+
 </html>

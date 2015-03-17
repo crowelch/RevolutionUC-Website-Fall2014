@@ -8,3 +8,33 @@ config/aws.json
 node_modules/
 .idea/
 *.DS_Store
+
+# OS files
+.DS_Store
+[T,t]humbs.db
+
+# IDE metadata
+.project
+.idea
+
+# Log files
+logs
+*.log
+
+# Dependencies
+node_modules
+bower_components
+
+# Grunt temp files
+.grunt
+
+# Sass files
+.sass-cache
+
+# Asset source files
+*.psd
+*.ai
+
+# Project build
+dist
+vendor
